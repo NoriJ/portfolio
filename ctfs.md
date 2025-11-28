@@ -1,68 +1,29 @@
 # 🏆 Mes CTFs
 
-Ceci est un aperçu dynamique de mes équipes et de leur classement mondial.
+## 🏴‍☠️ Participations aux CTFs
 
-<div id="team-393213-info">
-  Chargement des données CTFtime...
-</div>
+### 📅 2025
 
-<div id="all-teams-ranking">
-  </div>
+| Classement | CTF | Score | Rating point (ctftime)
+|------|-------------|---------|--------|---------|
+|**149**/732|	Full Weak Engineer CTF 2025|	1693|	3,412
+|**263**/1189|	scriptCTF 2025|	3064|	6,067 
+|**281**/1158|	BrunnerCTF 2025|	1401|	1,567
+|**174**/473|	corCTF 2025|	335|	4,166
+|**242**/641|	D^3CTF 2025|	200|	1,752 
+|**402**/1054|	SekaiCTF 2025|	178|	1,814
+|**217**/489|	TFC CTF 2025|	100|	1,278
+|**637**/717|	HITCON CTF 2025|	50|	1,149
+|**273**/518|	snakeCTF 2025 Quals|	50|	0,650
 
-<script>
-const TEAM_IDS = [393213, 35520, 287745];
-const MAIN_TEAM_ID = 393213;
-const API_BASE = "https://ctftime.org/api/v1/teams/";
+---
 
-// Fonction pour récupérer les données d'une seule équipe
-async function fetchTeamData(teamId) {
-    try {
-        const url = `${API_BASE}${teamId}/`;
-        const response = await fetch(url);
-        
-        // Vérifie si la requête a réussi (code 200)
-        if (!response.ok) {
-            throw new Error(`Erreur HTTP: ${response.status}`);
-        }
-        
-        const data = await response.json();
-        return data;
+### 📅 2024
 
-    } catch (error) {
-        console.error(`Impossible de récupérer les données pour l'ID ${teamId}:`, error);
-        return null;
-    }
-}
-
-// Fonction principale pour afficher les données
-async function displayCTFData() {
-    
-    // 1. Afficher l'équipe principale
-    const mainTeamData = await fetchTeamData(MAIN_TEAM_ID);
-    const mainContainer = document.getElementById(`team-${MAIN_TEAM_ID}-info`);
-    
-    if (mainTeamData && mainContainer) {
-        // Formatage du résultat en HTML
-        const htmlContent = `
-            <h3>${mainTeamData.name}</h3>
-            <p><strong>Pays :</strong> ${mainTeamData.country}</p>
-            <p><strong>Cote (Rating) :</strong> ${mainTeamData.rating.rating_points.toFixed(2)} pts</p>
-            <p><strong>Classement mondial actuel :</strong> #${mainTeamData.rating.current_rating_place}</p>
-            <a href="https://ctftime.org/team/${MAIN_TEAM_ID}" target="_blank">Voir le profil sur CTFtime →</a>
-        `;
-        mainContainer.innerHTML = htmlContent;
-    } else if (mainContainer) {
-        mainContainer.innerHTML = "<p>Erreur: Données de l'équipe principale non disponibles.</p>";
-    }
-    
-    // 2. (Optionnel) Lister toutes les équipes
-    // Vous pouvez étendre cette logique pour récupérer et afficher toutes les équipes ici.
-    // ...
-}
-
-// Lancement de la fonction une fois que la page est entièrement chargée
-window.onload = displayCTFData;
-</script>
+| Classement | CTF | Score | Rating point (ctftime)
+|------|-------------|---------|--------|---------|
+|**27**/>500 | CursedCTF 2024 Quals |	4780 |	5,612
+|**44**/280 | UNbreakable International 2024 - Individual Phase	| 1694 | 6,897
 
 
 ### 🔹 Catégories préférées
