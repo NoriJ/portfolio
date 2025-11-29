@@ -4,36 +4,31 @@ author: Rayan Lejrhoul
 order: 100
 ---
 
-# Accueil
+# Home
 
-## 👋 Salut, je suis Rayan
+## 👋 Hi, I'm Rayan
 
 
 
-Junior en **cybersécurité** et passionné par les **CTF** et challenges **Root-Me**.  
+Junior in **cybersecurity** with a passion for **CTFs** and **Root-Me** challenges.
 
-J’adore résoudre des énigmes techniques, apprendre de nouvelles techniques et participer à des compétitions pour progresser et me mesurer à la communauté.
-
+I love solving technical puzzles, learning new techniques, and taking part in competitions to improve and challenge myself against the community.
 
 
 ---
 
 
 
-## 🎯 Objectif du site
 
+## 🎯 Purpose of this site
 
+This website serves as a **portfolio** to showcase:
 
-Ce site sert de **portfolio** pour présenter :
+- 🏆 My past **CTFs** and results
 
+- 🛡️ My experience on **Root-Me**
 
-
-- 🏆 Mes **CTF passés** et mes résultats  
-
-- 🛡️ Mon expérience sur **Root-Me**  
-
-- 📫 Mes **contacts** pour collaborations ou opportunités  
-
+- 📫 My **contact** information for collaborations or opportunities
 
 
 ---
@@ -44,11 +39,11 @@ Ce site sert de **portfolio** pour présenter :
 
 
 
-- [Mes CTFs](ctfs.md) – Liste de mes compétitions et résultats 
+- [My CTFs](1-ctfs.md) – List of my competitions and results
 
-- [Root-Me](rootme.md) – Challenges résolus, badges et stats  
+- [Root-Me](2-rootme.md) – Solved challenges, badges, and stats
 
-- [Contact](contact.md) – Email, GitHub, LinkedIn  
+- [Contact](3-contact.md) – Email, GitHub, LinkedIn  
 
 
 
@@ -56,18 +51,17 @@ Ce site sert de **portfolio** pour présenter :
 
 
 
-## 💡 À propos de moi
+## 💡 About me
 
 
 
-- 🎓 Diplômé en cybersécurité  
+- 🎓 Cybersecurity graduate
 
-- 💻 Passionné par le **pentest, la stéganographie et le réseau**  
+- 💻 Passionate about **pentesting, steganography, and network security**
 
-- 📝 Je participe souvent à des CTF afin de garder une idée des techniques utilisés actuellement.
+- 📝 I often participate in CTFs to stay up-to-date with current techniques
 
-- 🌐 Toujours prêt pour des **collaborations CTF** ou des projets open-source  
-
+- 🌐 Always open to CTF collaborations or open-source projects  
 
 
 ---
@@ -82,7 +76,7 @@ Ce site sert de **portfolio** pour présenter :
 
 
 
-> “Apprendre en faisant, partager en progressant.”
+> “Learning by doing, sharing while progressing.”
 
 
 

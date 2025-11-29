@@ -1,6 +1,9 @@
-# 🏆 Mes CTFs
+---
+order: 99
+---
+# 🏆 My CTFs
 
-## 🏴‍☠️ Participations aux CTFs
+## 🏴‍☠️ CTFs participations
 
 ### 📅 2025
 
@@ -26,13 +29,13 @@
 |**44**/280 | UNbreakable International 2024 - Individual Phase	| 1694 | 6,897
 
 
-### 🔹 Catégories préférées
+### 🔹 Favorite categories
 - Web  
-- Programmation
+- Programming
 - Forensics  
 - OSINT
 
 ---
 
 ### 💡 Notes
-- Chaque CTF est une opportunité d’apprendre et de progresser  
+- Each CTF is an opportunity to learn and progress.  
