@@ -5,6 +5,12 @@ order: 99
 
 ### 🏴‍☠️ CTFs participations
 
+### 📅 2026
+
+| Classement | CTF | Score | Rating point (ctftime)
+|------|-------------|---------|--------|---------|
+|**99**/1006|	Opération Bellatrix COMCYBER |	3490|	N/A
+
 ### 📅 2025
 
 | Classement | CTF | Score | Rating point (ctftime)
