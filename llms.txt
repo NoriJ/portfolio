@@ -8,6 +8,6 @@
 - [📫 Contact](https://docs.example.com/3-contact.md): I’m open to collaborations, CTF discussions, cybersecurity topics, and opportunities.
 - [📝 Writeups](https://docs.example.com/4-writeups.md): HackTheBox machines and CTF challenge writeups — detailed breakdowns of my methodology, tools used, and key takeaways.
 
-## 📝 Writeups
+## Writeups
 
 - [Silentium](https://docs.example.com/4-writeups/silentium.md): Platform: HackTheBox · OS: Linux · Difficulty: Hard · Status: Retired

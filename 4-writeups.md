@@ -6,9 +6,9 @@ HackTheBox machines and CTF challenge writeups — detailed breakdowns of my met
 
 ## 🟥 HackTheBox
 
-| Machine                | OS    | Difficulty | Category      | Date       |
-| ---------------------- | ----- | ---------- | ------------- | ---------- |
-| [Silentium](silentium) | Linux | Hard       | Web / Privesc | April 2026 |
+| Machine                           | OS    | Difficulty | Category      | Date       |
+| --------------------------------- | ----- | ---------- | ------------- | ---------- |
+| [Silentium](4-writeups/silentium) | Linux | Hard       | Web / Privesc | April 2026 |
 
 ---
 
