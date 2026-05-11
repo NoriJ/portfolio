@@ -26,7 +26,9 @@ This website serves as a **portfolio** to showcase:
 
 - [Root-Me](2-rootme.md) – Solved challenges, badges, and stats
 
-- [Contact](3-contact.md) – Email, GitHub, LinkedIn  
+- [Contact](3-contact.md) – Email, GitHub, LinkedIn
+
+- [Writeups](4-writeups.md) - Writeups made for some challenges and machines
 
 ---
 
@@ -38,7 +40,7 @@ This website serves as a **portfolio** to showcase:
 
 - 📝 I often participate in CTFs to stay up-to-date with current techniques
 
-- 🌐 Always open to CTF collaborations or open-source projects  
+- 🌐 Always open to CTF collaborations or open-source projects
 
 ---
 
