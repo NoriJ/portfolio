@@ -8,17 +8,11 @@ order: 100
 
 ## 👋 Hi, I'm Rayan
 
-
-
 Junior in **cybersecurity** with a passion for **CTFs** and **Root-Me** challenges.
 
 I love solving technical puzzles, learning new techniques, and taking part in competitions to improve and challenge myself against the community.
 
-
 ---
-
-
-
 
 ## 🎯 Purpose of this site
 
@@ -30,30 +24,21 @@ This website serves as a **portfolio** to showcase:
 
 - 📫 My **contact** information for collaborations or opportunities
 
-
 ---
 
-
-
 ## 🧭 Navigation
-
-
 
 - [My CTFs](1-ctfs.md) – List of my competitions and results
 
 - [Root-Me](2-rootme.md) – Solved challenges, badges, and stats
 
-- [Contact](3-contact.md) – Email, GitHub, LinkedIn  
+- [Contact](3-contact.md) – Email, GitHub, LinkedIn
 
-
+- [Writeups](4-writeups.md) - Writeups made for some challenges and machines
 
 ---
 
-
-
 ## 💡 About me
-
-
 
 - 🎓 Cybersecurity graduate
 
@@ -61,12 +46,9 @@ This website serves as a **portfolio** to showcase:
 
 - 📝 I often participate in CTFs to stay up-to-date with current techniques
 
-- 🌐 Always open to CTF collaborations or open-source projects  
-
+- 🌐 Always open to CTF collaborations or open-source projects
 
 ---
-
-
 
 ## 🚀 Liens rapides
 
@@ -74,9 +56,4 @@ This website serves as a **portfolio** to showcase:
 
 ---
 
-
-
 > “Learning by doing, sharing while progressing.”
-
-
-
